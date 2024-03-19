@@ -1,35 +1,44 @@
 ---
+// Imgages
+import kunstner from "../assets/test-img.png";
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+  title: string;
+  body: string;
+  href: string;
 }
 
 const { href, title, body } = Astro.props;
 ---
 
 <section class="link-card">
-		
-		<h2>
-			{title}
-			
-		</h2>
-		<p>
-			{body}
-		</p>
-	<a href={href}>
-	See more <span>&rarr;</span>
-	</a>
+  <img src={kunstner.src} alt="" />
+  <div>
+    <h2>
+      {title}
+    </h2>
+    <p>
+      {body}
+    </p>
+    <a href={href}>
+      See more <span>&rarr;</span>
+    </a>
+  </div>
 </section>
-<style>
-	.link-card {
-		border: 1px solid white;
-		display: flex;
-		flex-direction: column;
-		width: 400px
-	}
-	.link-card a {
-		all: unset;
-	}
 
+<style>
+  .link-card {
+    padding-bottom: 10px;
+    background: #eb1010;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .link-card div {
+    margin: 10px;
+  }
+  .link-card a {
+    all: unset;
+  }
 </style>

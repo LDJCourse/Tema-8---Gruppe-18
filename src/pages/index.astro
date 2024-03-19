@@ -1,19 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import TicketInfo from "../components/TicketInfo.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-
-   
-      <Card
-        href="https://docs.astro.build/"
-        title="DJ Navn"
-        body="Personen vender tilbage med hans nye set og masser af spændende musik til karussel festival"
-      />
-    
-  
+    <Card
+      href=""
+      title="DJ Navn"
+      body="Personen vender tilbage med hans nye set og masser af spændende musik til karussel festival"
+    />
+    <TicketInfo />
   </main>
 </Layout>
 
@@ -26,6 +24,4 @@ import Card from "../components/Card.astro";
     font-size: 20px;
     line-height: 1.6;
   }
-  
-
 </style>
